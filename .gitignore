@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+/media
+/staticfiles
+/static
+
+# Environment
+.env
+.env.*
+!.env.example  # keep a safe example file
+
+# IDE / Editors
+.vscode/
+.idea/
+*.swp
+
+# Byte-compiled / cache
+*.egg-info/
+.eggs/
+*.egg
+dist/
+build/
+
+# Docker
+*.pid
+*.seed
+*.cover
+*.log
+docker-compose.override.yml
+
+# OS files
+.DS_Store
+Thumbs.db
