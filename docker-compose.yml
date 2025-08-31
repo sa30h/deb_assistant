@@ -44,6 +44,22 @@ services:
     networks:
       - app-network
 
+  # Streamlit Frontend
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    container_name: streamlit_app
+    ports:
+      - "8501:8501"
+    environment:
+      - API_BASE_URL=http://app:8000
+    depends_on:
+      - app
+    restart: unless-stopped
+    networks:
+      - app-network
+
   # Optional: nginx reverse proxy
   nginx:
     image: nginx:alpine
